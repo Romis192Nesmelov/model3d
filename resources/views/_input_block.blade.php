@@ -1,0 +1,3 @@
+@php ob_start(); @endphp
+<input {{ isset($disabled) && $disabled ? 'disabled=disabled' : '' }} {{ isset($icon) && $icon && (!isset($label) || !$label) ? 'style=padding-left:35px' : '' }} {{ isset($min) && $min ? 'min='.$min : '' }} {{ isset($max) && $max ? 'max='.$max : '' }} name="{{ $name }}" type="{{ $type }}" class="form-control" placeholder="{{ isset($placeholder) && $placeholder ? $placeholder : '' }}" value="{{ isset($value) && !count($errors) ? $value : (Session::has($name) ? Session::get($name) : old($name)) }}">
+@include('_input_cover_block',['content' => ob_get_clean()])

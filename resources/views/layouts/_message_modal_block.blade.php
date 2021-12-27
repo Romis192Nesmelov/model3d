@@ -1,0 +1,1 @@
+@include('layouts._modal_block',['id' => 'message', 'message' => (Session::has('message') ? Session::get('message') : '')])

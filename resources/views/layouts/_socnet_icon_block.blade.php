@@ -1,0 +1,1 @@
+<a href="{{ url($href) }}" target="_blank"><i class="{{ $icon }}"></i></a>
